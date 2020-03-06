@@ -29,7 +29,7 @@ def handle_items(player, item):
 
 
 def status_message(response):
-    if "errors" in response and response["errors"]:
+    if "errors" in response and len(response["errors"]):
         print("\b\b\b ❌ ")
         print(response["errors"])
     else:
@@ -83,7 +83,7 @@ def ls8(description):
     cpu = CPU()
     cpu.load(code)
     message = cpu.run()[-3:]
-
+    print()
     return int(message)
 
 
@@ -169,8 +169,8 @@ def move_to_location(player, destination, PICKUP_ENABLED=True):
                 if "errors" in response and not response["errors"]:
                     print(f"😄  TOOK {item} ✅")
 
-                cooldown = response["cooldown"]
-                time.sleep(cooldown)
+                # cooldown = response["cooldown"]
+                # time.sleep(cooldown)
                 if "errors" in response and response["errors"]:
                     print(response["errors"])
 
@@ -211,5 +211,5 @@ def mine(player):
     status_message(response)
 
     # print(response)
-    time.sleep(response["cooldown"])
+    # time.sleep(response["cooldown"])
     return response

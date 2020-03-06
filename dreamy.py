@@ -16,14 +16,14 @@ class Dreamy:
                     headers=headers
                 ).json()
                 cooldown = response["cooldown"]
-                time.sleep(cooldown)
                 successful = True
             except ValueError:
                 print("Error:  Non-json response")
                 print("Response returned:")
                 print(response)
-                time.sleep(cooldown)
 
+        time.sleep(cooldown)
+        # print(cooldown)
         return response
 
     def post(self, URL=None, headers=None, data={}, cooldown=15):
@@ -39,14 +39,14 @@ class Dreamy:
                     data=json.dumps(data),
                 ).json()
                 cooldown = response["cooldown"]
-                time.sleep(cooldown)
                 successful = True
             except ValueError:
                 print("Error:  Non-json response")
                 print("Response returned:")
                 print(response)
-                time.sleep(cooldown)
 
+        time.sleep(cooldown)
+        # print(cooldown)
         return response
 
 

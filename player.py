@@ -43,7 +43,7 @@ class Player:
         self.messages = response["messages"]
         self.cooldown = response["cooldown"]
 
-        time.sleep(self.cooldown)
+        # time.sleep(self.cooldown)
         return response
 
     def status_update(self):
@@ -81,7 +81,7 @@ class Player:
         self.errors = response["errors"]
         self.messages = response["messages"]
 
-        time.sleep(self.cooldown)
+        # time.sleep(self.cooldown)
         # print(self.cooldown)
         return response
 
@@ -105,7 +105,7 @@ class Player:
         self.messages = response["messages"]
         self.cooldown = response["cooldown"]
 
-        time.sleep(self.cooldown)
+        # time.sleep(self.cooldown)
         return response
 
     def wise_explorer(self, direction, room_id):
@@ -128,7 +128,7 @@ class Player:
         self.messages = response["messages"]
         self.cooldown = response["cooldown"]
 
-        time.sleep(self.cooldown)
+        # time.sleep(self.cooldown)
         return response
 
     def take_treasure(self, treasure):
@@ -144,7 +144,7 @@ class Player:
             cooldown=self.cooldown
         )
 
-        time.sleep(self.cooldown)
+        # time.sleep(self.cooldown)
         self.status_update()
         return response
 
@@ -177,7 +177,7 @@ class Player:
             cooldown=self.cooldown
         )
 
-        time.sleep(self.cooldown)
+        # time.sleep(self.cooldown)
         self.status_update()
         return response
 
@@ -208,7 +208,7 @@ class Player:
         )
 
         self.cooldown = response["cooldown"]
-        time.sleep(self.cooldown)
+        # time.sleep(self.cooldown)
         self.status_update()
         return response
 
@@ -227,7 +227,7 @@ class Player:
 
         print(response)
 
-        time.sleep(self.cooldown)
+        # time.sleep(self.cooldown)
         self.status_update()
         return response
 
@@ -246,7 +246,7 @@ class Player:
         print(response)
 
         self.cooldown = response["cooldown"]
-        time.sleep(self.cooldown)
+        # time.sleep(self.cooldown)
         self.status_update()
         return response
 
@@ -272,7 +272,7 @@ class Player:
         self.messages = response["messages"]
         self.cooldown = response["cooldown"]
 
-        time.sleep(self.cooldown)
+        # time.sleep(self.cooldown)
         return response
 
     def dash(self, direction, num_rooms, room_ids):
@@ -296,7 +296,7 @@ class Player:
         self.messages = response["messages"]
         self.cooldown = response["cooldown"]
 
-        time.sleep(self.cooldown)
+        # time.sleep(self.cooldown)
         return response
 
     def carry(self, treasure):
@@ -313,7 +313,7 @@ class Player:
         )
 
         self.cooldown = response["cooldown"]
-        time.sleep(self.cooldown)
+        # time.sleep(self.cooldown)
         self.status_update()
         return response
 
@@ -330,7 +330,7 @@ class Player:
         )
 
         self.cooldown = response["cooldown"]
-        time.sleep(self.cooldown)
+        # time.sleep(self.cooldown)
         self.status_update()
         return response
 
@@ -354,7 +354,7 @@ class Player:
         # self.cooldown = response["cooldown"]
 
         self.cooldown = response["cooldown"]
-        time.sleep(self.cooldown)
+        # time.sleep(self.cooldown)
         return response
 
     def recall(self):
@@ -377,7 +377,7 @@ class Player:
         # self.cooldown = response["cooldown"]
 
         self.cooldown = response["cooldown"]
-        time.sleep(self.cooldown)
+        # time.sleep(self.cooldown)
         return response
 
     def wear_item(self, item):
@@ -394,6 +394,6 @@ class Player:
         )
 
         self.cooldown = response["cooldown"]
-        time.sleep(self.cooldown)
+        # time.sleep(self.cooldown)
         self.status_update()
         return response

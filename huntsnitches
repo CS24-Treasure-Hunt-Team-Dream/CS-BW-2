@@ -103,8 +103,8 @@ def move_to_location(player, destination):
                 if "errors" in response and not response["errors"]:
                     print(f"😄  TOOK {item} ✅")
 
-                cooldown = response["cooldown"]
-                time.sleep(cooldown)
+                # cooldown = response["cooldown"]
+                # time.sleep(cooldown)
                 if "errors" in response and response["errors"]:
                     print(response["errors"])
 
@@ -114,11 +114,19 @@ if __name__ == '__main__':
     while True:
         print("Heading to the well!")
         move_to_location(player, 555)
+        # Wait at the well until the code changes
+        print("Peering into the well...")
         response = player.examine(treasure="Wishing Well")
+        PREV_ROOM_NR = ls8(response['description'])
+        print("Waiting for news of a new snitch...")
+        while True:
+            response = player.examine(treasure="Wishing Well")
+            ROOM_NR = ls8(response['description'])
+            if ROOM_NR != PREV_ROOM_NR:
+                break
+            PREV_ROOM_NR = ROOM_NR
         if TESTING:
             print(response)
-        print("Peering into the well...")
-        ROOM_NR = ls8(response['description'])
         print("Decoded the location!")
 
         # Move from the well to the new location
